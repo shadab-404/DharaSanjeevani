@@ -1,0 +1,530 @@
+
+/* ==============================
+   SMARTAGRI DASHBOARD
+   ============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f7f4;
+  color: #1d3025;
+}
+
+/* ==============================
+   SIDEBAR
+   ============================== */
+
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  min-height: 100vh;
+  background: #142b20;
+  color: #ffffff;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  letter-spacing: -0.5px;
+}
+
+.nav-heading {
+  color: #91a99a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0 15px 12px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 13px;
+  border-radius: 9px;
+  color: #c9d9ce;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #244a34;
+  color: #ffffff;
+}
+
+.nav-item.active {
+  background: #286342;
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #c0d0c5;
+  font-size: 12px;
+}
+
+.sidebar-footer span {
+  color: #82998a;
+}
+
+/* ==============================
+   MAIN CONTENT
+   ============================== */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   TOPBAR
+   ============================== */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.topbar h1 {
+  font-size: 27px;
+  font-weight: 700;
+  color: #1d3025;
+  margin: 0;
+}
+
+.topbar p {
+  margin-top: 7px;
+  font-size: 14px;
+  color: #758479;
+}
+
+.refresh-btn {
+  border: none;
+  background: #23613e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: #17472c;
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   WELCOME CARD
+   ============================== */
+
+.welcome-card {
+  background: linear-gradient(110deg, #174c32, #347b4c);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 175px;
+  box-shadow: 0 8px 24px rgba(27, 83, 49, 0.10);
+}
+
+.welcome-label {
+  color: #c2e1cc;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.welcome-card h2 {
+  font-size: 26px;
+  margin: 14px 0 10px;
+  color: #ffffff;
+}
+
+.welcome-card p {
+  color: #d5e9db;
+  font-size: 14px;
+}
+
+.welcome-icon {
+  font-size: 65px;
+}
+
+/* ==============================
+   SECTION HEADINGS
+   ============================== */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1d3025;
+}
+
+.live-label {
+  color: #32834f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==============================
+   SENSOR METRIC CARDS
+   ============================== */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 18px;
+}
+
+.metric-card {
+  background: #ffffff;
+  border: 1px solid #e8eee9;
+  border-radius: 13px;
+  padding: 22px;
+  min-height: 135px;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 12px rgba(20, 43, 32, 0.03);
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(20, 43, 32, 0.08);
+}
+
+.metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #758479;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.metric-icon {
+  font-size: 23px;
+}
+
+.metric-card h2 {
+  color: #1d3025;
+  font-size: 29px;
+  font-weight: 700;
+  margin-top: 22px;
+}
+
+.metric-card small {
+  color: #839087;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.muted {
+  color: #839087;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* ==============================
+   BOTTOM GRID
+   ============================== */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+
+/* ==============================
+   COMMON PANELS
+   ============================== */
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e8eee9;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(20, 43, 32, 0.03);
+  margin-bottom: 20px;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.panel-heading h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1d3025;
+  margin: 0;
+}
+
+.panel-heading span {
+  color: #728176;
+  font-size: 12px;
+}
+
+/* ==============================
+   LIST ITEMS
+   ============================== */
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #edf1ed;
+}
+
+.list-item strong {
+  font-size: 14px;
+  color: #24392b;
+}
+
+.list-item p {
+  margin-top: 5px;
+  color: #829087;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ==============================
+   TAGS
+   ============================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9f5ec;
+  color: #286342;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tag.warning {
+  background: #fff3d9;
+  color: #9b6900;
+}
+
+.tag.critical {
+  background: #ffe5e5;
+  color: #bb3030;
+}
+
+.tag.info {
+  background: #e8f0ff;
+  color: #315c9a;
+}
+
+/* ==============================
+   IRRIGATION STATUS
+   ============================== */
+
+.pump-status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 0;
+  margin: 15px 0;
+}
+
+.pump-icon {
+  width: 58px;
+  height: 58px;
+  background: #e9f5ec;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.pump-status strong {
+  color: #24392b;
+  font-size: 17px;
+}
+
+.pump-status p {
+  margin-top: 6px;
+  color: #839087;
+  font-size: 13px;
+}
+
+/* ==============================
+   EMPTY STATES
+   ============================== */
+
+.empty-state {
+  color: #839087;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+/* ==============================
+   ALERTS
+   ============================== */
+
+.alerts-panel {
+  margin-top: 22px;
+}
+
+/* ==============================
+   ERROR MESSAGE
+   ============================== */
+
+.error-message {
+  background: #fff0ef;
+  color: #b42318;
+  border: 1px solid #ffd5d1;
+  padding: 13px 16px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+  text-align: center;
+  color: #87948a;
+  font-size: 12px;
+  padding: 25px 0 10px;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+   ============================== */
+
+@media (max-width: 1100px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-content {
+    padding: 25px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+   ============================== */
+
+@media (max-width: 700px) {
+  .app-layout {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .brand {
+    margin-bottom: 18px;
+  }
+
+  .sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar-footer {
+    margin-top: 20px;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .welcome-card {
+    padding: 22px;
+  }
+
+  .welcome-card h2 {
+    font-size: 21px;
+  }
+
+  .welcome-icon {
+    display: none;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar nav {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    min-height: 115px;
+  }
+}
+
